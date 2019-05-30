@@ -8,4 +8,9 @@ p {
     color: #333;
 }
 
-
+#mapid {
+    width: 800px; 
+    height: 600px; 
+    position: relative; 
+    outline: currentcolor none medium;
+}
