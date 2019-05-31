@@ -36,7 +36,8 @@
 
 			function onLocationFound(e) {
 				var radius = e.accuracy / 2;
-				L.marker(e.latlng).addTo(mymap).bindPopup("You are within " + radius + " meters from this point").openPopup();
+				var roundedrad = parseFloat(Math.round(radius * 100) / 100).toFixed(1);
+				L.marker(e.latlng).addTo(mymap).bindPopup("You are within " + radius + " m from this point").openPopup();
 				L.circle(e.latlng, radius).addTo(mymap);
 			}
 			
