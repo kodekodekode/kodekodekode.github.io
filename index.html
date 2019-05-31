@@ -34,15 +34,15 @@
 			
 	
 
-			function onLocationFound(e) {
-				var radius = e.accuracy / 2;
+			function onLocationFound(loc) {
+				var radius = loc.accuracy / 2;
 				var roundedrad = parseFloat(Math.round(radius * 100) / 100).toFixed(1);
-				L.marker(e.latlng).addTo(mymap).bindPopup("You are within " + roundedrad + " m from this point").openPopup();
-				L.circle(e.latlng, radius).addTo(mymap);
+				L.marker(loc.latlng).addTo(mymap).bindPopup("You are within " + roundedrad + " m from this point").openPopup();
+				L.circle(loc.latlng, radius).addTo(mymap);
 			}
 			
-			function onLocationError(e) {
-				alert(e.message);
+			function onLocationError(error) {
+				alert(error.message);
 			}
 			
 			mymap.on('locationfound', onLocationFound);
