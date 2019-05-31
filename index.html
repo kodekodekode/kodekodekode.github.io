@@ -31,9 +31,6 @@
 			var marker = L.marker([1.279815, 103.816579]).addTo(mymap);
 			marker.bindPopup("<b>DSTA is here!</b>");
 			
-			
-	
-
 			function onLocationFound(loc) {
 				var radius = loc.accuracy / 2;
 				var roundedrad = parseFloat(Math.round(radius * 100) / 100).toFixed(1);
