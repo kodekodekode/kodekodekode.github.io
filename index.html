@@ -3,8 +3,6 @@
 	<head>
 		<title> My New Site! </title>
 		
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-		
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
 		
 		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
@@ -32,6 +30,8 @@
 			
 			var marker = L.marker([1.279815, 103.816579]).addTo(mymap);
 			marker.bindPopup("<b>DSTA is here!</b>");
+			
+			map.locate({setView: true, maxZoom: 16});
 		</script>
 	</body>
 </html>
